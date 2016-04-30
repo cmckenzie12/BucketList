@@ -1,0 +1,20 @@
+<a href='#/dashboard'>My Bucket List</a> | <a href='#/'>Logout</a>
+
+<h4>{{user.name}}'s Bucket List</h4>
+
+<h5>Done</h5>
+
+<div ng-repeat='item in bucketlist' ng-if='item.complete == true'>
+<input type="checkbox" ng-model="item.complete" disabled='true'>
+{{item.taged}} | {{item.title}} | {{item.description}} | 
+<span ng-bind="item.created_at | date: 'MMMM dd, yyyy'"></span>
+</div>
+
+
+<h5>Pending</h5>
+
+<div ng-repeat='item in bucketlist' ng-if='item.complete != true'>
+<input type="checkbox" ng-model="item.complete" disabled='true'>
+{{item.taged}} | {{item.title}} | {{item.description}} | 
+<span ng-bind="item.created_at | date: 'MMMM dd, yyyy'"></span>
+</div>

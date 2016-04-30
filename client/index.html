@@ -1,0 +1,27 @@
+
+<html ng-app='myApp'>
+	<head>
+		<title>Bucket List</title>
+		<link rel='stylesheet' href='style.css'>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" src="js/angular-route.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/factories/userFactory.js"></script>
+		<!-- <script type="text/javascript" src="js/factories/dashboardFactory.js"></script> -->
+		<script type="text/javascript" src="js/factories/bucketlistFactory.js"></script>
+		<script type="text/javascript" src="js/controllers/userController.js"></script>
+		<script type="text/javascript" src="js/controllers/dashboardController.js"></script>
+		<script type="text/javascript" src="js/controllers/bucketlistController.js"></script>
+		<script type="text/javascript" src="js/routes.js"></script>
+		<script>
+
+		</script>
+	</head>
+	<body>
+		<div id='container'>
+			<!-- <a href='#/user'>Bucket List</a> | <a href='#/dashboard'>Home</a> | <a href='#/'>Logout</a> -->
+			<div ng-view=''></div>
+		</div>
+	</body>
+</html>

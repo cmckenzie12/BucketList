@@ -1,0 +1,27 @@
+<a href='#/dashboard'>My Bucket List</a> | <a href='#/'>Logout</a>
+<h1>Welcome, {{user.name}}!</h1>
+
+<form>
+	<div  style='background-color: red; margin-left: 50px; margin-bottom: 10px; width: 300px;' ng-bind='err_required'></div>
+	<div  style='background-color: red; margin-left: 50px; margin-bottom: 10px; width: 300px;' ng-bind='err_length'></div>
+
+	<input type="text" ng-model='new_item.title'>
+	<input type="text" ng-model='new_item.description'>
+	<select ng-model='new_item.taged' >
+		<option ng-repeat="user in users" value="{{user.name}}">{{user.name}}</option>
+	</select>
+	<button ng-click='addItem()'>Add to List</button>
+</form>
+
+<h5>Before I die I want to...</h5>
+
+<div ng-repeat='item in bucketlist'>
+<input type="checkbox" ng-model="item.complete" ng-change="change(item)">
+{{item.taged}} | {{item.title}} | {{item.description}} | 
+<span ng-bind="item.created_at | date: 'MMMM dd, yyyy'"></span>
+</div>
+<br>
+<h5>List of other users (Click to view profile):</h5>
+<ul style="list-style-type:none">
+	<li ng-repeat='user in users'><a href="#/user/{{user.name}}">{{user.name}}</a></li>
+</ul>

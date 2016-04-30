@@ -1,0 +1,16 @@
+<br>
+<br>
+<form class="form-horizontal" ng-submit='checkUser()'>
+	<div class="form-group">
+		<h2 style='margin-left: 120px;'>Bucket Lists</h2>
+		<div  style='margin-left: 20px; background-color: red; margin-left: 250px; margin-bottom: 10px; width: 300px;' ng-bind='err_msg'></div>
+		
+		<label class="control-label col-md-2">Your Name:</label>
+		<div class="col-md-4">	
+			<input class="form-control" ng-model="user.name" placeholder="Your Name..."/>
+		</div>
+	</div>
+	<div class="form-group">
+		<button class="btn btn-primary col-md-1 col-md-offset-5">Submit</button>
+	</div>
+</form>
